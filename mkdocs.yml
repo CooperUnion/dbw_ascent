@@ -1,3 +1,8 @@
-site_name: Cooper Common Microcontroller Node Docs
+site_name: Cooper Common Microcontroller Node
 theme:
+  logo: assets/CU_Logo.png
   name: material
+  palette:
+    accent: cyan
+    primary: cyan
+    scheme: slate
