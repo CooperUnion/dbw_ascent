@@ -1,8 +1,8 @@
-site_name: Cooper Common Microcontroller Node
+site_name: Cooper DBW Good Book
 theme:
   logo: assets/CU_Logo.png
   name: material
   palette:
-    accent: cyan
-    primary: cyan
+    accent: red
+    primary: red
     scheme: slate
