@@ -174,3 +174,30 @@ There is a limited number of functions you can call with interrupts disabled
 
 If you come up against this kind of synchronization challenge, please reach out
 to Dan. We'll have more extensive learning material on this in the future.
+
+## PlatformIO
+PlatformIO is a build system for embedded development projects. It rocks and
+we use it to build our projects. When you run `fwpio`
+(see [Getting Started](../getting_started)), that's running `pio`, which is
+how you interact with PlatformIO from the command line.
+
+The firmware is broken up into *environments*, which are defined in
+`platformio.ini`. Each environment is, in our case, a separate ECU.
+
+You can specify the environment to PlatformIO generally with `-e`. For example,
+
+```sh
+❯ fwpio run -e precharge
+```
+
+Means "PlatformIO: in environment `precharge`, run the default *targets*, which
+includes building the firmware.
+
+To specify additional targets, you can use `-t`:
+
+```
+❯ fwpio run -e precharge -t upload
+```
+
+Means "PlatformIO: in environment `precharge`, run the `upload` target", which
+will upload firmware to a board attached to your computer.
